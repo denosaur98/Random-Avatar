@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper">
         <div class="frame">
-            <BackgroundImg/>
+            <BackgroundImg ref="backgroundImg"/>
             <BodysImg ref="bodysImg"/>
             <img src="../../src/components/Head.png" class="head">
             <TopImg/>
@@ -36,11 +36,13 @@ export default {
     },
     data() {
     return {
-      selectedImg: null,
-    };
+        selectedImg: null,
+        };
     },
     methods: {
     random() {
+        this.$refs.backgroundImg.random();
+        this.selectedImg = this.$refs.backgroundImg.selectedImg;
         this.$refs.bodysImg.random();
         this.selectedImg = this.$refs.bodysImg.selectedImg;
         },
