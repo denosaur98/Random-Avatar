@@ -4,12 +4,12 @@
             <BackgroundImg ref="backgroundImg"/>
             <BodysImg ref="bodysImg"/>
             <img src="../../src/components/Head.png" class="head">
-            <TopImg/>
-            <EyebrowsImg/>
-            <EyesImg/>
-            <GlassesImg/>
-            <MouthImg/>
-            <PetsImg/>
+            <TopImg ref="topImg"/>
+            <EyebrowsImg ref="eyebrowsImg"/>
+            <EyesImg ref="eyesImg"/>
+            <GlassesImg ref="glassesImg"/>
+            <MouthImg ref="mouthImg"/>
+            <PetsImg ref="petsImg"/>
         </div>
     </div>
     <button class="btn" @click="random">СОЗДАТЬ</button>
@@ -45,6 +45,18 @@ export default {
         this.selectedImg = this.$refs.backgroundImg.selectedImg;
         this.$refs.bodysImg.random();
         this.selectedImg = this.$refs.bodysImg.selectedImg;
+        this.$refs.eyebrowsImg.random();
+        this.selectedImg = this.$refs.eyebrowsImg.selectedImg;
+        this.$refs.eyesImg.random();
+        this.selectedImg = this.$refs.eyesImg.selectedImg;
+        this.$refs.glassesImg.random();
+        this.selectedImg = this.$refs.glassesImg.selectedImg;
+        this.$refs.mouthImg.random();
+        this.selectedImg = this.$refs.mouthImg.selectedImg;
+        this.$refs.petsImg.random();
+        this.selectedImg = this.$refs.petsImg.selectedImg;
+        this.$refs.topImg.random();
+        this.selectedImg = this.$refs.topImg.selectedImg;
         },
     },
 }

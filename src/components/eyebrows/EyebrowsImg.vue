@@ -1,18 +1,35 @@
 <template>
     <div class="eyebrows_img">
-        <img src="../eyebrows/Angry.png">
-        <img src="../eyebrows/Formed.png" v-show="toggle">
-        <img src="../eyebrows/Round.png" v-show="toggle">
-        <img src="../eyebrows/Thick.png" v-show="toggle">
-        <img src="../eyebrows/Thin.png" v-show="toggle">
-        <img src="../eyebrows/Unsure.png" v-show="toggle">
+        <img :src="selectedImg" :class="imgClass"/>
     </div>
 </template>
 <script>
-
+export default {
+  data() {
+    return {
+      selectedImg: require("../eyebrows/Angry.png"),
+      imgClass: "eyebrows_img",
+      images: [
+        { src: require("../eyebrows/Angry.png"), class: "eyebrows_img" },
+        { src: require("../eyebrows/Formed.png"), class: "eyebrows_img" },
+        { src: require("../eyebrows/Round.png"), class: "eyebrows_img" },
+        { src: require("../eyebrows/Thick.png"), class: "eyebrows_img" },
+        { src: require("../eyebrows/Thin.png"), class: "eyebrows_img" },
+        { src: require("../eyebrows/Unsure.png"), class: "eyebrows_img" },
+      ],
+    };
+  },
+  methods: {
+    random() {
+      const randIndex = Math.floor(Math.random() * this.images.length);
+      this.selectedImg = this.images[randIndex].src;
+      this.imgClass = this.images[randIndex].class;
+    },
+  },
+};
 </script>
 <style>
 .eyebrows_img {
-    margin-top: -100px;
+    margin-top: -85px;
 }
 </style>

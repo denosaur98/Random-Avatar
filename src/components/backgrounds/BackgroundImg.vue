@@ -1,9 +1,8 @@
 <template>
   <div class="background_img">
-    <img :src="selectedImg" :class="imgClass" />
+    <img :src="selectedImg" :class="imgClass"/>
   </div>
 </template>
-
 <script>
 export default {
   data() {
@@ -26,7 +25,6 @@ export default {
   },
 };
 </script>
-
 <style>
 .background_img {
   display: flex;

@@ -1,16 +1,33 @@
 <template>
     <div class="mouth_img">
-        <img src="../mouth/Line.png">
-        <img src="../mouth/Beard_2.png" v-show="toggle">
-        <img src="../mouth/Beard.png" v-show="toggle">
-        <img src="../mouth/Lips.png" v-show="toggle">
-        <img src="../mouth/Open_Smile.png" v-show="toggle">
-        <img src="../mouth/Original.png" v-show="toggle">
-        <img src="../mouth/Smile.png" v-show="toggle">
+        <img :src="selectedImg" :class="imgClass"/>
     </div>
 </template>
 <script>
-
+export default {
+  data() {
+    return {
+      selectedImg: require("../mouth/Line.png"),
+      imgClass: "mouth_img",
+      images: [
+        { src: require("../mouth/Line.png"), class: "mouth_img" },
+        { src: require("../mouth/Beard_2.png"), class: "mouth_img" },
+        { src: require("../mouth/Beard.png"), class: "mouth_img" },
+        { src: require("../mouth/Lips.png"), class: "mouth_img" },
+        { src: require("../mouth/Open_Smile.png"), class: "mouth_img" },
+        { src: require("../mouth/Original.png"), class: "mouth_img" },
+        { src: require("../mouth/Smile.png"), class: "mouth_img" },
+      ],
+    };
+  },
+  methods: {
+    random() {
+      const randIndex = Math.floor(Math.random() * this.images.length);
+      this.selectedImg = this.images[randIndex].src;
+      this.imgClass = this.images[randIndex].class;
+    },
+  },
+};
 </script>
 <style>
 .mouth_img {

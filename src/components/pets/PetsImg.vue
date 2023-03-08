@@ -1,18 +1,34 @@
 <template>
     <div class="pets_img">
-        <!-- <img src="../pets/Raptor.png"> -->
-        <img src="../pets/Cat.png" v-show="toggle">
-        <img src="../pets/Dog.png" v-show="toggle">
-        <img src="../pets/Fish.png" v-show="toggle">
+        <img :src="selectedImg" :class="imgClass"/>
     </div>
 </template>
 <script>
-
+export default {
+  data() {
+    return {
+      selectedImg: require("../pets/Raptor.png"),
+      imgClass: "pets_img",
+      images: [
+        { src: require("../pets/Raptor.png"), class: "pets_img" },
+        { src: require("../pets/Cat.png"), class: "pets_img" },
+        { src: require("../pets/Dog.png"), class: "pets_img" },
+        { src: require("../pets/Fish.png"), class: "pets_img" },
+      ],
+    };
+  },
+  methods: {
+    random() {
+      const randIndex = Math.floor(Math.random() * this.images.length);
+      this.selectedImg = this.images[randIndex].src;
+      this.imgClass = this.images[randIndex].class;
+    },
+  },
+};
 </script>
 <style>
 .pets_img {
-    margin-top: 20px;
-    margin-left: -300px;
-    transform: rotate(-20deg);
+    margin-top: 5px;
+    margin-left: -100px;
 }
 </style>
