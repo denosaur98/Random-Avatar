@@ -5,26 +5,26 @@
 </template>
 <script>
 export default {
-data() {
-    return {
-        selectedImg: null,
-        toggle: false,
-    };
-},
-methods: {
-    random() {
-        const images = [
-            {src: require("../bodys/Muscle_shirt.png"), classList: "muscle"},
-            {src: require("../bodys/Necklace.png"), classList: "necklace"},
-            {src: require("../bodys/Plain.png"), classList: "plain"},
-            {src: require("../bodys/Print.png"), classList: "print"},
-            {src: require("../bodys/Super_hero.png"), classList: "superhero"},
-            {src: require("../bodys/Sweater.png"), classList: "sweater"},
-        ];
-        const firstImg = document.querySelector(".bodys img");
-        const randIndex = Math.floor(Math.random() * images.length);
-        firstImg.src = images[randIndex].src;
-        firstImg.classList = "bodys " + images[randIndex].classList;
+    data() {
+        return {
+            selectedImg: null,
+            toggle: false,
+        };
+    },
+    methods: {
+        random() {
+            const images = [
+                {src: require("../bodys/Muscle_shirt.png"), classList: "muscle"},
+                {src: require("../bodys/Necklace.png"), classList: "necklace"},
+                {src: require("../bodys/Plain.png"), classList: "plain"},
+                {src: require("../bodys/Print.png"), classList: "print"},
+                {src: require("../bodys/Super_hero.png"), classList: "superhero"},
+                {src: require("../bodys/Sweater.png"), classList: "sweater"},
+            ];
+            const firstImg = document.querySelector(".bodys img");
+            const randIndex = Math.floor(Math.random() * images.length);
+            firstImg.src = images[randIndex].src;
+            firstImg.classList = "bodys " + images[randIndex].classList;
         },
     }
 };

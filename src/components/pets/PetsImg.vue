@@ -11,8 +11,8 @@ export default {
       imgClass: "pets_img",
       images: [
         { src: require("../pets/Raptor.png"), class: "pets_img" },
-        { src: require("../pets/Cat.png"), class: "pets_img" },
-        { src: require("../pets/Dog.png"), class: "pets_img" },
+        { src: require("../pets/Cat.png"), class: "pets_img cat" },
+        { src: require("../pets/Dog.png"), class: "pets_img dog" },
         { src: require("../pets/Fish.png"), class: "pets_img" },
       ],
     };
@@ -28,7 +28,13 @@ export default {
 </script>
 <style>
 .pets_img {
-    margin-top: 5px;
-    margin-left: -100px;
+  position: absolute;
+  background-repeat: no-repeat;
+  top: 150px;
+  margin-left: -25px;
+  z-index: 2;
+}
+.cat, .dog {
+  top: 120px;
 }
 </style>

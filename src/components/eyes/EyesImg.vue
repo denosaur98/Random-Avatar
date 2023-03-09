@@ -28,5 +28,14 @@ export default {
 };
 </script>
 <style>
-
+.eyes_img {
+  position: absolute;
+  margin-top: -20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 999;
+  top: 100px;
+  margin-left: 108px;
+  transform: translateX(-50%);
+}
 </style>

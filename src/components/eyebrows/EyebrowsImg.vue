@@ -30,6 +30,13 @@ export default {
 </script>
 <style>
 .eyebrows_img {
-    margin-top: -85px;
+  position: absolute;
+  margin-top: -32px;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 999;
+  top: 100px;
+  margin-left: 108px;
+  transform: translateX(-50%);
 }
 </style>

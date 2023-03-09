@@ -11,7 +11,6 @@ export default {
       imgClass: "mouth_img",
       images: [
         { src: require("../mouth/Line.png"), class: "mouth_img" },
-        { src: require("../mouth/Beard_2.png"), class: "mouth_img" },
         { src: require("../mouth/Beard.png"), class: "mouth_img" },
         { src: require("../mouth/Lips.png"), class: "mouth_img" },
         { src: require("../mouth/Open_Smile.png"), class: "mouth_img" },
@@ -31,6 +30,11 @@ export default {
 </script>
 <style>
 .mouth_img {
-    margin-left: -5px;
+  margin-left: -5px;
+  position: absolute;
+  background-repeat: no-repeat;
+  top: 100px;
+  margin-left: 108px;
+  transform: translateX(-50%);
 }
 </style>
