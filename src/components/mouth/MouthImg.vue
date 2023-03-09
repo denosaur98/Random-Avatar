@@ -14,7 +14,7 @@ export default {
         { src: require("../mouth/Beard.png"), class: "mouth_img" },
         { src: require("../mouth/Lips.png"), class: "mouth_img" },
         { src: require("../mouth/Open_Smile.png"), class: "mouth_img" },
-        { src: require("../mouth/Original.png"), class: "mouth_img" },
+        { src: require("../mouth/Original.png"), class: "mouth_img original" },
         { src: require("../mouth/Smile.png"), class: "mouth_img" },
       ],
     };
@@ -36,5 +36,8 @@ export default {
   top: 100px;
   margin-left: 108px;
   transform: translateX(-50%);
+}
+.original {
+  top: 110px;
 }
 </style>
